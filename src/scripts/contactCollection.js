@@ -11,7 +11,7 @@ const dataLoad = Object.create(null, {
     saveData: {
         enumerable: true,
         writable: true,
-        value: function(databaseObject, localStorageKey){
+        value: function(databaseObject, localStorageKey){ //databaseObject is the info you pass in, localStorageKey is just the name of that object in the local storage (return name(key) to view info passed in)
             const stringData = JSON.stringify(databaseObject)
             localStorage.setItem(localStorageKey, stringData)
         }
